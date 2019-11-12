@@ -67,48 +67,14 @@ public @interface Col {
 @Data
 public class SettlementItem {
 
-	@Col(name = "结算单号")
-	private String settlementId; // JD 京东结算单号
-
-	@Col(name = "供应商名称")
-	private String supplier; // 供应商名称
-
-	@Col(name = "供应商简码")
-	private String supplierCode; // 供应商简码
-
-	@Col(name = "合同主体")
-	private String contractSubject;// 合同主体
-
-	@Col(name = "应付帐单据类型")
-	private Ticket ticket; // 应付帐单据类型
-
 	@Col(name = "单据编号")
-	private String ticketId; // 单据编号
-
-	@Col(name = "业务单号", fallback = "采购单号")
-	private String businessId; // 采购单号
-
-	@Col(name = "业务发生时间")
-	private LocalDateTime businessTime; // 业务发生时间
-
-	@Col(name = "台账类型")
-	@NotNull(message = "台账类型不能为空")
-	private String deskType; // 台账类型
-
-	@Col(name = "采购员")
-	private String purchaser; // 采购员
-
+	private String ticketId;
+    
 	@Col(name = "备注")
-	private String remark; // 备注
-
-	@Col(name = "SKU编码")
-	private Integer skuCode; // SKU编码
-
-	@Col(name = "SKU名称")
-	private String skuName; // SKU名称
+	private String remark;
 
 	@Col(name = "单价")
-	private BigDecimal unitPrice; // 单价
+	private BigDecimal unitPrice;
 
     @Col(name = "数量")
 	@Min(value = 2, message = "数量最少2个起购")
