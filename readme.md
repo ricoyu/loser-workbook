@@ -89,7 +89,7 @@ public class SettlementItem {
 }
 ```
 
-注意`@NotNull(message = "台账类型不能为空")`, `@Min(value = 2, message = "数量最少2个起购")`是JSR380标准API, 后面会讲到
+注意`@Min(value = 2, message = "数量最少2个起购")`是JSR380标准API, 后面会讲到
 
 ### 2) 客户端代码
 
@@ -153,7 +153,7 @@ public void testUnmarshall() throws Exception {
 Stacktrace示例:
 
 ```java
-BindException: [ConstraintViolationImpl{interpolatedMessage='台账类型不能为空', propertyPath=deskType, rootBeanClass=class SettlementItem, messageTemplate='台账类型不能为空'}]
+BindException: [ConstraintViolationImpl{interpolatedMessage='数量最少2个起购', propertyPath=qty, rootBeanClass=class SettlementItem, messageTemplate='数量最少2个起购'}]
 	at ExcelUnmarshaller.unmarshall(ExcelUnmarshaller.java:124)
 	at ExcelUnmarshellTest.testUnmarshall(ExcelUnmarshellTest.java:32)
 ```
