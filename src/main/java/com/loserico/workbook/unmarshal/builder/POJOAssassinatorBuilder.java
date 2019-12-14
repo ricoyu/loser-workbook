@@ -4,6 +4,7 @@ import com.loserico.workbook.annotation.Col;
 import com.loserico.workbook.exception.InvalidConfigurationException;
 import com.loserico.workbook.exception.NoCellCommandException;
 import com.loserico.workbook.unmarshal.assassinator.POJOAssassinator;
+import com.loserico.workbook.unmarshal.command.EnumCellCommand;
 import com.loserico.workbook.utils.ReflectionUtils;
 import com.loserico.workbook.unmarshal.command.BigDecimalCellCommand;
 import com.loserico.workbook.unmarshal.command.BooleanCellCommand;
@@ -98,6 +99,9 @@ public class POJOAssassinatorBuilder {
 			if (fieldType.isAssignableFrom(Integer.class)) {
 				assassinator.setCellCommand(new IntegerCellCommand(field));
 				continue;
+			}
+			if (fieldType.isEnum()) {
+				assassinator.setCellCommand(new EnumCellCommand(field, annotation.enumProperty()));
 			}
 			if (assassinator.getCellCommand() == null) {
 				throw new NoCellCommandException("No CellCommand found for type " + fieldType.getName());

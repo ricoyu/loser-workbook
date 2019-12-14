@@ -20,7 +20,7 @@ public class ExcelUnmarshellTest {
 //				.sheetName("Sheet1")
 				.fallbackSheetIndex(0)
 				.pojoType(SettlementItem.class)
-//				.validate(true)
+				.validate(true)
 				.build();
 		long total = 0;
 //		for (int i = 0; i < 10; i++) {

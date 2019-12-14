@@ -22,7 +22,7 @@ public class SettlementItem {
 	@Col(name = "合同主体")
 	private String contractSubject;// 合同主体
 
-	@Col(name = "应付帐单据类型")
+	@Col(name = "应付帐单据类型", enumProperty = "desc")
 	private Ticket ticket; // 应付帐单据类型
 
 	@Col(name = "单据编号")

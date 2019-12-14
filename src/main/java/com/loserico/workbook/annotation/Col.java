@@ -42,4 +42,12 @@ public @interface Col {
 	 * @return int
 	 */
 	int index() default -1;
+	
+	/**
+	 * 如果该字段是enum类型, 并且Enum中定义了property, 而Excel中这一列的值正好是要匹配Enum对象的某个property
+	 * 这里需要指定property的名字
+	 * 如果这里匹配的是Enum的orginal或者name则不需要指定
+	 * @return
+	 */
+	String enumProperty() default "";
 }
