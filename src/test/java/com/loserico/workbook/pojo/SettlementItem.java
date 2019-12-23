@@ -4,6 +4,7 @@ import com.loserico.workbook.annotation.Col;
 import com.loserico.workbook.enums.Ticket;
 import lombok.Data;
 
+import javax.validation.constraints.NotBlank;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
@@ -14,6 +15,7 @@ public class SettlementItem {
 	private String settlementId; // JD 京东结算单号
 
 	@Col(index = 1)
+	@NotBlank(message = "供应商名称不能为为空")
 	private String supplier; // 供应商名称
 
 	@Col(name = "供应商简码")

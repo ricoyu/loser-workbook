@@ -17,8 +17,8 @@ public class ExcelUnmarshellTest {
 		File file = IOUtils.readClasspathFileAsFile("excel/1005466.xlsx");
 //		Workbook workbook = ExcelUtils.getWorkbook(IOUtils.readClasspathFileAsFile("excel/958395-one.csv"));
 		ExcelUnmarshaller unmarshaller = ExcelUnmarshaller.builder(file)
-//				.sheetName("Sheet1")
-				.fallbackSheetIndex(0)
+				.sheetName("Sheet1")
+				//.fallbackSheetIndex(0)
 				.pojoType(SettlementItem.class)
 				.validate(true)
 				.build();
