@@ -10,6 +10,7 @@
     <parent>
         <groupId>com.loserico</groupId>
         <artifactId>sexy-uncle</artifactId>
+        <relativePath>../sexy-uncle/pom.xml</relativePath>
         <version>4.6.4</version>
     </parent>
 
@@ -35,10 +36,6 @@
         <dependency>
             <groupId>org.apache.poi</groupId>
             <artifactId>poi-ooxml</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>log4j</groupId>
-            <artifactId>log4j</artifactId>
         </dependency>
         <dependency>
             <groupId>org.slf4j</groupId>
