@@ -1,6 +1,6 @@
 package com.loserico.workbook.unmarshal;
 
-import com.loserico.workbook.concurrent.Concurrent;
+import com.loserico.common.lang.concurrent.Concurrent;
 import com.loserico.workbook.exception.BuilderUncompleteException;
 import com.loserico.workbook.exception.WorkbookCreationException;
 import com.loserico.workbook.unmarshal.assassinator.AssassinatorMaster;

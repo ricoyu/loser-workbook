@@ -1,7 +1,6 @@
 package com.loserico.workbook.utils;
 
 import com.loserico.workbook.exception.ValidationException;
-import lombok.Data;
 import org.hibernate.validator.internal.engine.path.PathImpl;
 import org.springframework.validation.AbstractBindingResult;
 import org.springframework.validation.BindException;
@@ -81,7 +80,6 @@ public final class ValidationUtils {
 		return new ErrorMessage(errors);
 	}
 	
-	@Data
 	public static class SimpleBindingResult extends AbstractBindingResult {
 
 		/**
@@ -128,6 +126,14 @@ public final class ValidationUtils {
 
 		public void setRowNum(int rowNum) {
 			this.rowNum = rowNum;
+		}
+		
+		public void setTarget(Object target) {
+			this.target = target;
+		}
+		
+		public void setFieldErrors(List<FieldError> fieldErrors) {
+			this.fieldErrors = fieldErrors;
 		}
 	}
 	
